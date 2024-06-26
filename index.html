@@ -18,10 +18,14 @@
   
   </head>  
   <body class="bg-gray-300">
-    <input type="text" placeholder="State" id="stateBox">
-    <input type="text" placeholder="City/County" id="cityBox">
-    <button id="testCSV" pys-onClick="testFile" class="border-solid border-4 border-gray-600" type="submit">Find Crimes In Your Area</button>
-    
+    <div id="allBody" class="inline-block flex justify-center">
+      <div id="containerCard" class="bg-gray-400 p-2 rounded-xl inline-block shadow-2xl">
+        <input type="text" placeholder="State" class="p-3 rounded-xl block my-4 mx-4 m-auto w-80" id="stateBox">
+        <input type="text" placeholder="City/County" class="p-3 rounded-xl block my-4 mx-4 m-auto w-80" id="cityBox">
+        <button id="testCSV" pys-onClick="testFile" class="w-80 border-solid border-4 block m-auto border-gray-600 my-4 mx-4 p-3 rounded-xl bg-gray-300" type="submit">Find Crimes In Your Area</button>
+      </div>
+    </div>
+
     <div id="output_div"></div>
 
     <py-script src="./main.py"></py-script>
