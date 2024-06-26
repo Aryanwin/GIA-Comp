@@ -6,6 +6,28 @@ body{
     margin: 30px;
 }
 
+#testCSV:hover{
+    -webkit-transform: translateY(-2px);
+	transform: translateY(-2px);
+    background-color: rgb(199, 203, 209);
+}
+
 #testCSV{
-    padding: 8px;
+    transition: 0.3s;
+}
+
+#cityBox{
+    transition: 0.3s;
+}
+
+#stateBox{
+    transition: 0.3s;
+}
+
+#cityBox:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+#stateBox:hover{
+    background-color: rgb(228, 228, 228);
 }
