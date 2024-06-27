@@ -9,14 +9,17 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <link href="./dist/output.css" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
-   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>    
+   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>   
+   <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.2/core.css">
+   <script type="module" src="https://pyscript.net/releases/2024.6.2/core.js"></script> 
   
    <py-env>
     - pandas
     - numpy
-    </py-env>
+  </py-env>
   
-  </head>  
+</head>
+<py-script src="./main.py"></py-script>
   <body class="bg-gray-300">
     <div id="allBody" class="flex justify-center mx-6">
       <div id="containerCard" class="bg-gray-400 p-2 rounded-xl inline-block shadow-2xl">
@@ -28,16 +31,12 @@
       <div id="output_div" class="flex-grow-0 justify-center mx-6 shadow-2xl bg-gray-400 rounded">
         <label id="riskOutput" class="rounded w-90 p-2">The Risk Index value for <span style="font-weight: bold;">*city*, *state* </span> is <span style="font-weight: bold;"> *risk*.</span></label> 
         <br>
-        <div id="imgOutput">Image Here</div>
+        <div id="imgOutputDiv">
+          <img src="plt.png" alt="Plot of Data for Selected Town" id="imgOutput">
+        </div>
       </div>
     </div>
       
-    <py-script src="./main.py"></py-script>
-     <!-- <py-script>
-      def testFile(*args, **kwargs):
-        output = Element("output_div")
-        output.write("Hello")
-     </py-script> -->
      
   </body>
 </html>
