@@ -50,21 +50,21 @@ def riskCalcAlg(State, city, date):
     gun_data_filtered2 = gun_data_filtered.loc[gun_data_filtered["city_or_county"]==city]
     #print(gun_data_filtered2)
     
-    X = gun_data_filtered2[["intDate"]]
+    x = gun_data_filtered2[["intDate"]]
     y = gun_data_filtered2[["risk"]]
-
+    #print(y)
+    
     model = linear_model.LinearRegression()
 
-    model.fit(X,y)
+    model.fit(x,y)
 
-    y_pred = model.predict(X)
+    y_pred = model.predict(x)
     
     ##prints out the graph using plt...if yall can figure out how to implement this then great, but for rn it'll stay commented
-    ##plt.plot(gun_data["intDate"], y_pred, color='red')
-    ##plt.scatter(X, y) 
-
+    plt.plot(gun_data_filtered2["intDate"], y_pred, color='red')
+    #plt.scatter(x, y) 
+    plt.savefig('gundata.png')
     ##plt.show()
-    
     
     predrisk = model.intercept_ + model.coef_*(dateconvert(date))
     print(model.intercept_)
