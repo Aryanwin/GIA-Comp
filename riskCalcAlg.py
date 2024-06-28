@@ -1,11 +1,11 @@
-import pandas as pd # type: ignore
-import numpy as np # type: ignore
-import seaborn as sns # type: ignore
-import matplotlib.pyplot as plt # type: ignore
-import statistics as st # type: ignore
-from statistics import mean # type: ignore
-from sklearn import linear_model # type: ignore
-from scipy import stats # type: ignore
+import pandas as pd
+import numpy as np 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+import statistics as st 
+from statistics import mean 
+from sklearn import linear_model
+from scipy import stats
 
 def dateconvert(string):
     dateint = 0
@@ -70,5 +70,5 @@ def runner():
     #print(maxrisk)
     gun_data["risk"] = risklist
 
-    print(riskCalcAlg("New Hampshire", "Nashua", "2025/03/25"))
+    print(riskCalcAlg("Illinios", "Chicago", "2025/03/25"))
     print("success!")

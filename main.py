@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from pyodide.http import open_url
-from pyscript import window, document
+from pyscript import window, document, when, display
 from riskCalcAlg import runner
 
 dataSheet = pd.read_csv(open_url("gun-violence-data_01-2013_03-2018.csv"))
@@ -13,7 +13,9 @@ dataSheet = pd.read_csv(open_url("gun-violence-data_01-2013_03-2018.csv"))
 #     # output.write(crimeStates[0])
 #     output.write("Test")
 
-def testFile(*args, **kwargs):
+@when("click", "#testCSV")
+def testFile(event):
+    print("the click")
     state_box = Element("stateBox")
     city_box = Element("cityBox")
     state_input = state_box.value

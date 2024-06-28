@@ -11,7 +11,7 @@
    <link rel="stylesheet" href="styles.css">
    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>   
    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.2/core.css">
-   <script type="module" src="https://pyscript.net/releases/2024.6.2/core.js"></script> 
+   <!-- <script type="module" src="https://pyscript.net/releases/2024.6.2/core.js"></script>  -->
   
    <py-env>
     - pandas
@@ -25,7 +25,7 @@
       <div id="containerCard" class="bg-gray-400 p-2 rounded-xl inline-block shadow-2xl">
         <input type="text" placeholder="State" class="p-3 rounded-xl block my-4 mx-4 m-auto w-80" id="stateBox">
         <input type="text" placeholder="City/County" class="p-3 rounded-xl block my-4 mx-4 m-auto w-80" id="cityBox">
-        <button id="testCSV" pys-onClick="testFile" class="w-80 border-solid border-4 block m-auto border-gray-600 my-4 mx-4 p-3 rounded-xl bg-gray-300" type="submit">Find Crimes In Your Area</button>
+        <button id="testCSV" class="w-80 border-solid border-4 block m-auto border-gray-600 my-4 mx-4 p-3 rounded-xl bg-gray-300" type="submit">Find Crimes In Your Area</button>
       </div>
       
       <div id="output_div" class="flex-grow-0 justify-center mx-6 shadow-2xl bg-gray-400 rounded">
